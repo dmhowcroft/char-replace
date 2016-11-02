@@ -28,11 +28,11 @@ doreplacement = (text) ->
     text = text.replace /([\w])---(?=[a-z])/g, ($0, $1) -> $1+"—"
     text = text.replace /([0-9])--(?=[0-9])/g, ($0, $1) -> $1+"–"
     # Arrows
-    text = text.replace /==>/g, "⇒"
+    text = text.replace /\=\=>/g, "⇒"
     text = text.replace /-->/g, "→"
-    text = text.replace /<==/g, "⇐"
+    text = text.replace /<\=\=/g, "⇐"
     text = text.replace /<--/g, "←"
-    text = text.replace /<==>/g, "⇔"
+    text = text.replace /<\=\=>/g, "⇔"
     
     
     return text
