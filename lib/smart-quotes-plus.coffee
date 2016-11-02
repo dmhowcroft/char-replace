@@ -19,19 +19,20 @@ smartreplace = (editor) ->
 
 doreplacement = (text) ->
 
-    open_double = "``"
-    open_single = "`"
-
-    # quotes
-    text = text.replace /"(?=\w)/g, ($0) -> open_double
-    text = text.replace /'(?=\w)/g, ($0) -> open_single
-
     # misc chars
     text = text.replace /\.\.\./g, "…"
     text = text.replace /\(C\)/g, "©"
     text = text.replace /\(R\)/g, "®"
     text = text.replace /\(TM\)/g, "™"
+    # Dashes
     text = text.replace /([\w])---(?=[a-z])/g, ($0, $1) -> $1+"—"
     text = text.replace /([0-9])--(?=[0-9])/g, ($0, $1) -> $1+"–"
-
+    # Arrows
+    text = text.replace /==>/g, "⇒"
+    text = text.replace /-->/g, "→"
+    text = text.replace /<==/g, "⇐"
+    text = text.replace /<--/g, "←"
+    text = text.replace /<==>/g, "⇔"
+    
+    
     return text
