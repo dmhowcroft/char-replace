@@ -1,4 +1,6 @@
-Copyright (c) 2014 Blake T. Garretson <blake@blakeg.net>
+Copyright (c) 2016 David M. Howcroft (github.com/dmhowcroft).
+
+Based on smart-quotes-plus, which is copyright (c) 2014 Blake T. Garretson <blake@blakeg.net>.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
